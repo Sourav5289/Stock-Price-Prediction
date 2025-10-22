@@ -3,7 +3,7 @@ import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import yfinance as yf
+import yfinance as yf #Instead of import yfinance as yf you can import pandas_datareader as web
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import Dense, LSTM
