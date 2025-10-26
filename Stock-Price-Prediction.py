@@ -79,4 +79,18 @@ y_test = dataset[training_data_len:, :]
 for i in range(60, len(test_data)):
 x_test.append(test_data[i-60:i, 0])
 
+# Convert the data to a numpy array
+x_test = np.array(x_test)
+
+# The data is already in the correct 3D shape (samples, time steps, features)
+# x_test.shape should be (number of test samples, 60, 1)
+x_test = np.reshape(x_test, (x_test.shape[0] , x_test.shape[1],1))
+
+#Get the models predicted price values
+predictions = model.predict(x_test)
+predictions = scaler.inverse_transform(predictions)
+
+#get the root mean square error(RMSE)
+rmse = np.sqrt(np.mean(predictions - y_test)**2)
+rmse
 
