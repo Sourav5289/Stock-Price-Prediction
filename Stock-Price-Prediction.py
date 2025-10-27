@@ -97,4 +97,5 @@ rmse
 #plot the data
 train = data[:training_data_len]
 valid = data[training_data_len:]
+valid['Predictions'] = predictions
 
