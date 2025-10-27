@@ -94,3 +94,7 @@ predictions = scaler.inverse_transform(predictions)
 rmse = np.sqrt(np.mean(predictions - y_test)**2)
 rmse
 
+#plot the data
+train = data[:training_data_len]
+valid = data[training_data_len:]
+
