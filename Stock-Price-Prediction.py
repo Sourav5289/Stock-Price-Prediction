@@ -109,3 +109,8 @@ plt.plot(valid[['Close', 'Predictions']])
 plt.legend(['Train', 'Val', 'Predictions'], loc='lower right')
 plt.show()
 
+#show the valid and predicted prices
+valid
+
+#Get the quote
+apple_quote = yf.download('AAPL', start='2012-01-01', end='2019-12-17')
