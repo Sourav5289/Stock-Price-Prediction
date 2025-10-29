@@ -117,3 +117,6 @@ apple_quote = yf.download('AAPL', start='2012-01-01', end='2019-12-17')
 
 #Print columns to diagnose
 print (apple quote.columns)
+
+#create new dataframe with only the 'Close' column
+new_df = apple_quote['Close']
