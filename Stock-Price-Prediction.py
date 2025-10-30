@@ -127,3 +127,6 @@ last_60_days = new_df[-60:].values
 
 #create an empty list
 X_test = []
+
+#append the past 60 days
+X_test.append(last_60_days_scaled)
