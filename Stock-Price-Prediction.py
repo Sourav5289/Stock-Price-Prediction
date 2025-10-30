@@ -130,3 +130,6 @@ X_test = []
 
 #append the past 60 days
 X_test.append(last_60_days_scaled)
+
+#convert the X_test data set to a numpy array
+X_test = np.array(X_test)
