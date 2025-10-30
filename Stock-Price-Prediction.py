@@ -124,3 +124,6 @@ new_df = apple_quote['Close']
 
 #Get the last 60 day closing price values and convert the dataframe to an array
 last_60_days = new_df[-60:].values
+
+#create an empty list
+X_test = []
