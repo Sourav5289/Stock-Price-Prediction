@@ -136,3 +136,6 @@ X_test = np.array(X_test)
 
 #Reshape the data
 X_test = np.reshape(X_test, (X_test.shape[0] , X_test.shape[1],1))
+
+#Get the predicted scaled price
+pred_price = model.predict(X_test)
