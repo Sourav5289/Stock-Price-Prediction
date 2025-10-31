@@ -133,3 +133,6 @@ X_test.append(last_60_days_scaled)
 
 #convert the X_test data set to a numpy array
 X_test = np.array(X_test)
+
+#Reshape the data
+X_test = np.reshape(X_test, (X_test.shape[0] , X_test.shape[1],1))
