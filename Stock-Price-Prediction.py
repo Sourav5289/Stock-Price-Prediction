@@ -24,3 +24,13 @@ plt.plot(df['Close'])
 plt.xlabel('Date',fontsize=18)
 plt.ylabel('Close Price USD ($)',fontsize=18)
 plt.show()
+
+#Create a new dataframe with only the 'close column'
+data=df.filter(['Close'])
+
+#convert the dataframe to numpy array
+dataset=data.values
+
+#Get the number of rows to train the model on
+training_data_len=math.ceil(len(dataset) * .8)
+training_data_len
