@@ -55,3 +55,9 @@ if i<=61:
 print(x_train)
 print(y_train)
 print()
+
+#convert the x_train and y_train to numpy arrays
+x_train , y_train = np.array(x_train), np.array(y_train)
+#reshape the data
+x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+x_train.shape
