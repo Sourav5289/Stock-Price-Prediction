@@ -40,3 +40,18 @@ training_data_len
 scaler=MinMaxScaler(feature_range=(0,1))
 scaled_data=scaler.fit_transform(dataset)
 scaled_data
+
+
+#training dataset
+#create the scaled training data set
+train_data=scaled_data[0:training_data_len , :]
+#split the data into x_train and y_train data sets
+x_train=[]
+y_train=[]
+for i in range(60,len(train_data)):
+x_train.append(train_data[i-60:i,0])
+y_train.append(train_data[i,0])
+if i<=61:
+print(x_train)
+print(y_train)
+print()
