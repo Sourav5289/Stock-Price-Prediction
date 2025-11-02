@@ -123,3 +123,9 @@ print(apple_quote.columns)
 
 #create new dataframe with only the 'Close' column
 new_df = apple_quote['Close']
+
+#Get the last 60 day closing price values and convert the dataframe to an array
+last_60_days = new_df[-60:].values
+
+#scale the data to be values between 0 and 1
+last_60_days_scaled = scaler.transform(last_60_days)
